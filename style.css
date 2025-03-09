@@ -1,0 +1,461 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@media (prefers-color-scheme: light) {
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    body {
+        background-color: #d4d4d4;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    header {
+        background: #ccc;
+        color: black;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    header.shrink {
+        padding: 10px;
+        background: rgba(220, 220, 220, 0.9);
+    }
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover{
+        background-color: #555;
+        color: #FFF;
+        border-radius: 5px;
+    }
+    .leftColumn {
+        min-width: 300px;
+        text-align: center;
+        background: white;
+        padding: 15px;
+        border-radius: 20px 0 0 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .rightColumn {
+        min-width: 300px;
+        text-align: center;
+        background: white;
+        padding: 15px;
+        border-radius: 0 20px 20px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .indexColumn{
+        background-color: #ccc 
+    }
+    footer {
+        background: #999;
+        display: flex;
+        position:fixed;
+        justify-content: center;
+        bottom: 0;
+        color: black;
+        padding: 25px;
+        text-align: center;
+        width: 100%;
+        gap: 15px;
+        margin-top: auto;
+    }
+    .flipCardFront, .flipCardBack {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .flipCardFront {
+        background: white;
+    }
+    .flipCardBack {
+        background: #f8f9fa;
+        transform: rotateY(180deg);
+    }
+    .flipButton {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+    .contact {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contactHeading {
+        text-align: center;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .inputGroup label {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 5px;
+    }
+    
+    .inputGroup input,
+    .inputGroup textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #555;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .contactBTN {
+        background: #555;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .contactBTN:hover {
+        background: #666;
+    }
+    
+    .social{
+        text-decoration: underline;
+        color: black;
+        font-weight: 750;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    body {
+        background-color: #282828;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    header {
+        background: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    header.shrink {
+        padding: 10px;
+        background: rgba(51, 51, 51, 0.9);
+    }
+
+    .hamburger{
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover{
+        background-color: #FFF;
+        color: #666;
+        border-radius: 5px;
+    }
+
+    .rightColumn {
+        min-width: 300px;
+        text-align: center;
+        background: #777;
+        padding: 15px;
+        border-radius: 0 20px 20px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .leftColumn {
+        min-width: 300px;
+        text-align: center;
+        background: #777;
+        padding: 15px;
+        border-radius: 20px 0 0 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .indexColumn{
+        background-color: #333
+    }
+    footer {
+        background: #333;
+        display: flex;
+        position:fixed;
+        justify-content: center;
+        bottom: 0;
+        color: white;
+        padding: 25px;
+        text-align: center;
+        width: 100%;
+        gap: 15px;
+        margin-top: auto;
+    }
+    .flipCardFront, .flipCardBack {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:20px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .flipCardFront {
+        background: white;
+        height: 100%;
+    }
+    .flipCardBack {
+        background: #777;
+        transform: rotateY(180deg);
+    }
+    .flipButton {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+    .contact {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contactHeading {
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        margin-bottom: 20px;
+    }
+    .inputGroup label {
+        font-size: 14px;
+        color: white;
+        margin-bottom: 5px;
+    }
+    
+    .inputGroup input,
+    .inputGroup textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .contactBNTN {
+        background: #555;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .contactBTN:hover {
+        background: #666;
+    }
+    
+    .social{
+        text-decoration: underline;
+        color: white;
+        font-weight: 750;
+    }
+}
+.column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;;
+    padding: 20px;
+}
+
+header {
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+main {
+    text-align: center;
+    padding: 100px 20px 80px; 
+    flex-grow: 1;
+}
+
+
+.indexContainerTop{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.indexContainerBottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+}
+
+.resumeContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 0px;
+    padding: 20px;
+}
+
+.resumeContainerBottom {
+    height: auto;
+}
+.ResumeDescription{
+    text-align: start;
+}
+
+img {
+    max-width: 325px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.flipCard{
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+.flipCardInner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+.flipCard:hover .flipCardInner {
+    transform: rotateY(180deg);
+}
+
+.flipCard:focus-within .flipCardInner {
+    transform: rotateY(180deg);
+}
+
+
+.flipButton:hover {
+    transform: scale(1.1);
+}
+
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputGroup textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+@media (max-width: 768px) {
+    .indexContainerTop, .indexContainerBottom {
+        grid-template-columns: 1fr;
+    }
+    .resumeContainer{
+        grid-template-columns: 1fr;
+    }
+    .navContent {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top:100px;
+        width: 95px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .navContent.active {
+        display: flex;
+    }
+    .hamburger{
+        display: block;
+        background-color: #333;
+        color: white;
+        padding-left: 26.5px;
+    }
+}

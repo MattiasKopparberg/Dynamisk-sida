@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact me</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <h1>My contact information</h1>
+      <nav class="navBar">
+        <button class="hamburger">
+          <i class="fa-solid fa-bars fa-2xl"></i>
+        </button>
+        <ul class="navContent">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Full Resume</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="contact">
+        <h1 class="contactHeading">Contact Me</h1>
+        <form class="contactForm">
+          <div class="inputGroup">
+            <label for="name">Your name :</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="inputGroup">
+            <label for="email">Your E-mail :</label>
+            <input type="text" id="email" />
+          </div>
+          <div class="inputGroup textarea-group">
+            <label for="text">Your message :</label>
+            <textarea id="text"></textarea>
+          </div>
+          <button type="button" class="contactBTN">Send message</button>
+          <div class="inputGroup">
+            <h2>Contact info: Email: mkopparberg@hotmail.com</h2>
+            <h2>Phone number: +46793477094</h2>
+            <h2>
+              <a
+                id="social"
+                href="https://www.linkedin.com/in/mattias-kopparberg"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </h2>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <a href="https://www.linkedin.com/in/mattias-kopparberg" target="_blank"
+          >LinkedIn</a
+        >
+        | <a href="mailto:mkopparberg@hotmail.com">mkopparberg@hotmail.com</a> |
+        <a href="https://github.com/mattiasKopparberg/" target="_blank"
+          >GitHub</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

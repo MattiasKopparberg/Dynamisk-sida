@@ -1,0 +1,49 @@
+{
+  "experience": [
+    {
+      "Position": "Youth Consult",
+      "Company": ":Part, Berghs School of Communication",
+      "Date": "Jun 2024",
+      "Description": "I was hired by :Part as a Youth Consultant and was tasked with finding solutions to a problem presented by Stockholm Exergi. The issue presented was that too few people were choosing to pursue an education in the electrical industry.",
+      "Image": "./images/bergh.webp"
+    },
+    {
+      "Position": "APL (Internship) ",
+      "Company": "SpeerON",
+      "Date": "Jan 23 - Dec 23",
+      "Description": "The tasks I performed included installing various devices innetwork/TV systems, communicating with customers via phone/email, and working with installation and deployment on-site.",
+      "Image": "./images/speeron.webp"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Cisco certified Support Technician",
+      "institution": "Cisco Academy",
+      "date": "May 2024",
+      "curriculum": "Certificate from Cisco as proof for completing cisco's course &qout;Cisco Certified Support Technician&quot;",
+      "diploma": "./images/CCST.webp"
+    },
+    {
+      "degree": "CCNAv7:Introduction to Networks",
+      "institution": "Cisco Academy",
+      "date": "Feb 2024",
+      "curriculum": "Certificate from Cisco as proof for completing cisco's course squot;CCNAv7: Switching, Routing and Wireless essentialssquot;",
+      "diploma": "./images/Introductions.webp"
+    },
+    {
+      "degree": "CCNAv7:Routing, Switching and Wireless Essentials",
+      "institution": "Cisco Academy",
+      "date": "Feb 2024",
+      "curriculum": "Certificate from Cisco as proof for completing cisco's course quot;CCNAv7: Switching, Routing and Wireless essentialsquot;",
+      "diploma": "./images/routing-and-switching.webp"
+    },
+    {
+      "degree": "CCNAv7:Enterprise Networking, Security, and Automation",
+      "institution": "Cisco Academy",
+      "date": "Jun 2024",
+      "curriculum": "Certificate from Cisco as proof for completing cisco's course &quot;CCNAv7:Enterprise Networking, Security, and Automation&quot;",
+      "diploma": "./images/ENSA.webp"
+    }
+  ]
+}
