@@ -21,21 +21,21 @@
       "degree": "Cisco certified Support Technician",
       "institution": "Cisco Academy",
       "date": "May 2024",
-      "curriculum": "Certificate from Cisco as proof for completing cisco's course &qout;Cisco Certified Support Technician&quot;",
+      "curriculum": "Certificate from Cisco as proof for completing cisco's course &quot;Cisco Certified Support Technician&quot;",
       "diploma": "./images/CCST.webp"
     },
     {
       "degree": "CCNAv7:Introduction to Networks",
       "institution": "Cisco Academy",
       "date": "Feb 2024",
-      "curriculum": "Certificate from Cisco as proof for completing cisco's course squot;CCNAv7: Switching, Routing and Wireless essentialssquot;",
+      "curriculum": "Certificate from Cisco as proof for completing cisco's course &quot;CCNAv7: Switching, Routing and Wireless essentials&quot;",
       "diploma": "./images/Introductions.webp"
     },
     {
       "degree": "CCNAv7:Routing, Switching and Wireless Essentials",
       "institution": "Cisco Academy",
       "date": "Feb 2024",
-      "curriculum": "Certificate from Cisco as proof for completing cisco's course quot;CCNAv7: Switching, Routing and Wireless essentialsquot;",
+      "curriculum": "Certificate from Cisco as proof for completing cisco's course &quot;CCNAv7: Switching, Routing and Wireless essentials&quot;",
       "diploma": "./images/routing-and-switching.webp"
     },
     {

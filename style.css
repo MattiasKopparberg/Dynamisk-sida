@@ -437,9 +437,19 @@ img {
 @media (max-width: 768px) {
     .indexContainerTop, .indexContainerBottom {
         grid-template-columns: 1fr;
+        gap: 60px;
     }
     .projectContainer{
         grid-template-columns: 1fr;
+    }
+    .resumeColumn {
+        grid-template-columns: 1fr;
+    }
+    .leftColumn{
+        border-radius: 20px 20px 0 0;
+    }
+    .rightColumn{
+        border-radius: 0 0 20px 20px;
     }
     .navContent {
         display: none;
