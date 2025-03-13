@@ -441,6 +441,7 @@ img {
     }
     .projectContainer{
         grid-template-columns: 1fr;
+        gap: 0px;
     }
     .resumeColumn {
         grid-template-columns: 1fr;
@@ -450,6 +451,7 @@ img {
     }
     .rightColumn{
         border-radius: 0 0 20px 20px;
+        gap: 0px 0px 0px 20px;
     }
     .navContent {
         display: none;
