@@ -1,6 +1,6 @@
 //hamburger menu made with knowledge retained from "övning nav-bar" and reading about classList on w3schools.
 document.querySelector(".hamburger").addEventListener("click", function () {
-  document.querySelector(".nav-content").classList.toggle("active");
+  document.querySelector(".navContent").classList.toggle("active");
 });
 //same as hamburger menu, but consulting ChatGPT for where to start and suggestions on dynamic JS elements
 // with specific instructions to not to give code or solutions. And only answers when i got stuck such as
@@ -27,7 +27,7 @@ fetch("data.json")
       const image = job.Image;
 
       const experienceDiv = document.createElement("div");
-      experienceDiv.classList.add("column");
+      experienceDiv.classList.add("resumeColumn");
 
       const leftColumn = document.createElement("div");
       leftColumn.classList.add("leftColumn");
@@ -57,7 +57,7 @@ fetch("data.json")
       const diploma = course.diploma;
 
       const educationDiv = document.createElement("div");
-      educationDiv.classList.add("column");
+      educationDiv.classList.add("resumeColumn");
 
       const leftColumn = document.createElement("div");
       leftColumn.classList.add("leftColumn");

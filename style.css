@@ -320,9 +320,6 @@
     }
 }
 .column{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-direction: column;;
     padding: 20px;
 }
 
@@ -365,7 +362,7 @@ main {
     height: auto;
 }
 
-.resumeContainer{
+.projectContainer{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px 0px;
@@ -431,12 +428,17 @@ img {
     min-height: 100px;
 }
 
+.resumeColumn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
 
 @media (max-width: 768px) {
     .indexContainerTop, .indexContainerBottom {
         grid-template-columns: 1fr;
     }
-    .resumeContainer{
+    .projectContainer{
         grid-template-columns: 1fr;
     }
     .navContent {
