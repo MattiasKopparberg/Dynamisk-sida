@@ -14,71 +14,73 @@ window.addEventListener("scroll", () => {
   }
 });
 
-fetch("data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const experienceSection = document.getElementById("experience");
+function fetchResume() {
+  fetch("data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const experienceSection = document.getElementById("experience");
 
-    data.experience.forEach((job) => {
-      const position = job.Position;
-      const company = job.Company;
-      const date = job.Date;
-      const description = job.Description;
-      const image = job.Image;
+      data.experience.forEach((job) => {
+        const position = job.Position;
+        const company = job.Company;
+        const date = job.Date;
+        const description = job.Description;
+        const image = job.Image;
 
-      const experienceDiv = document.createElement("div");
-      experienceDiv.classList.add("resumeColumn");
+        const experienceDiv = document.createElement("div");
+        experienceDiv.classList.add("resumeColumn");
 
-      const leftColumn = document.createElement("div");
-      leftColumn.classList.add("leftColumn");
-      leftColumn.innerHTML = `
-                <strong>${position} at ${company} (${date})</strong><br>
-                <p>${description}</p>
-            `;
-
-      const rightColumn = document.createElement("div");
-      rightColumn.classList.add("rightColumn");
-      if (image) {
-        rightColumn.innerHTML = `<img src="${image}" alt="${position}">`;
-      }
-
-      experienceDiv.appendChild(leftColumn);
-      experienceDiv.appendChild(rightColumn);
-
-      experienceSection.appendChild(experienceDiv);
-    });
-
-    const educationSection = document.getElementById("education");
-    data.education.forEach((course) => {
-      const student = course.degree;
-      const school = course.institution;
-      const duration = course.date;
-      const curriculum = course.curriculum;
-      const diploma = course.diploma;
-
-      const educationDiv = document.createElement("div");
-      educationDiv.classList.add("resumeColumn");
-
-      const leftColumn = document.createElement("div");
-      leftColumn.classList.add("leftColumn");
-      leftColumn.innerHTML = `
-                  <strong>${student} at ${school} (${duration})</strong><br>
-                  <p>${curriculum}</p>
+        const leftColumn = document.createElement("div");
+        leftColumn.classList.add("leftColumn");
+        leftColumn.innerHTML = `
+                  <strong>${position} at ${company} (${date})</strong><br>
+                  <p>${description}</p>
               `;
 
-      const rightColumn = document.createElement("div");
-      rightColumn.classList.add("rightColumn");
-      if (diploma) {
-        rightColumn.innerHTML = `<img src="${diploma}" alt="${student}">
-        <h3>Click to view diploma</h3>`;
-        rightColumn.addEventListener("click", () => {
-          window.open(diploma);
-        });
-      }
+        const rightColumn = document.createElement("div");
+        rightColumn.classList.add("rightColumn");
+        if (image) {
+          rightColumn.innerHTML = `<img src="${image}" alt="${position}">`;
+        }
 
-      educationDiv.appendChild(leftColumn);
-      educationDiv.appendChild(rightColumn);
+        experienceDiv.appendChild(leftColumn);
+        experienceDiv.appendChild(rightColumn);
 
-      educationSection.appendChild(educationDiv);
+        experienceSection.appendChild(experienceDiv);
+      });
+
+      const educationSection = document.getElementById("education");
+      data.education.forEach((course) => {
+        const student = course.degree;
+        const school = course.institution;
+        const duration = course.date;
+        const curriculum = course.curriculum;
+        const diploma = course.diploma;
+
+        const educationDiv = document.createElement("div");
+        educationDiv.classList.add("resumeColumn");
+
+        const leftColumn = document.createElement("div");
+        leftColumn.classList.add("leftColumn");
+        leftColumn.innerHTML = `
+                    <strong>${student} at ${school} (${duration})</strong><br>
+                    <p>${curriculum}</p>
+                `;
+
+        const rightColumn = document.createElement("div");
+        rightColumn.classList.add("rightColumn");
+        if (diploma) {
+          rightColumn.innerHTML = `<img src="${diploma}" alt="${student}">
+          <h3>Click to view diploma</h3>`;
+          rightColumn.addEventListener("click", () => {
+            window.open(diploma);
+          });
+        }
+
+        educationDiv.appendChild(leftColumn);
+        educationDiv.appendChild(rightColumn);
+
+        educationSection.appendChild(educationDiv);
+      });
     });
-  });
+  }
